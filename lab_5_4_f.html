@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+    <label>email :</label>
+    <input type="email" id="email" name="">
+    <div id="sucessmsg" style="color: green"></div>
+    <div id="errormsg" style="color: red"></div>
+    <button onclick="validation()">Submit</button>
+ <script type="text/javascript">
+ 	function validation() {
+ 		user = document.getElementById('email').value
+ 		userregex =/^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/
+
+ 		if(userregex.test(user)){
+              document.getElementById("sucessmsg").innerHTML="valid user"
+              document.getElementById("errormsg").innerHTML=""
+ 		}
+ 		else{
+ 			document.getElementById("errormsg").innerHTML="Invalid user"
+            document.getElementById("sucessmsg").innerHTML=""
+ 		}
+ 	}
+ </script>
+</body>
+</html>

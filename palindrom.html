@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var num=parseInt(prompt("enter the number"));
+		var rem,tem,final=0;
+		temp=num;
+
+		while(num>0){
+			rem=num%10;
+			final=final*10+rem;
+			num=parseInt(num/10);
+
+		}
+		if(temp==final){
+			document.write("number is palidrome")
+		}
+		else{
+			document.write("number is not palidrome")
+		}
+	</script>
+
+</body>
+</html>

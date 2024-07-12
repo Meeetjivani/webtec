@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lab-6-1</title>
+</head>
+<body>
+ <div id="div1" style="height: 400px;width: 400px;background-color: red"></div>
+ <button onclick="changecolor()">Change color</button>
+
+ <script type="text/javascript">
+       // function changecolor(){
+       //        document.getElementById('div1').style.backgroundColor="blue"
+       //  } 	
+        function changecolor(){
+        	r= Math.floor(Math.random() *255);
+        	g= Math.floor(Math.random() *255);
+        	b= Math.floor(Math.random() *255);
+        	document.getElementById('div1').style.backgroundColor="rgb("+r+","+g+","+b+")"
+        }
+ </script>
+</body>
+</html>

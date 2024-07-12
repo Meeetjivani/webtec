@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab-3-2</title>
+</head>
+<body>
+  <script type="text/javascript">
+  	 var arr =[];
+  	 var size=parseInt(prompt("Enter size of arry"));
+  	 for(let i=0;i<size;i++){
+         arr[i]=parseInt(prompt( `${i}`));
+  	 }
+  	  document.write(arr);
+  	  arr2=arr.sort(function(a,b){
+  	  	return a-b;
+  	  });
+       document.write("<br> sort arr ="+arr2);
+  </script>
+</body>
+</html>

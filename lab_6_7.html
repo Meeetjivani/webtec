@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>crud opration</title>
+</head>
+<body>
+	<input type="text" name="" id="name" placeholder="Enter String">
+	<button onclick="addelement()">add</button>
+	<input type="number" name="" id="Edite" placeholder="Enter edite arry index">
+	<input type="text" name="" id="review" placeholder="Enter new String">
+	<button onclick="editelement()">Edite</button>
+	<div id="displaystring"></div>
+<script type="text/javascript">
+	arr = [];
+	function addelement(){
+          temp=document.getElementById('name')
+          arr.push(temp.value);
+          temp.value="";
+          console.log(arr);
+          display();
+	}
+	function display(){
+		x=document.getElementById('displaystring');
+		x.innerHTML="";
+		for(let i=0;i<arr.length;i++){
+               x.innerHTML+= arr[i]+`<button onclick="deleteelement(${i})" >Delete</button>`+"<br/>"
+              
+		}		
+	}
+	function deleteelement(i){
+            arr.splice(i,1);
+            display();
+	}
+	function editelement(){
+		index=document.getElementById('Edite');
+		newal=document.getElementById('review')
+		arr[index.value]=newal.value;
+		display();
+	}
+</script>
+</body>
+</html>

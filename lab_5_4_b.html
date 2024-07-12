@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+    <label>password :</label>
+    <input type="password" id="password" name="">
+    <label>reenter password :</label>
+    <input type="password" id="password" name="">
+    <div id="sucessmsg" style="color: green"></div>
+    <div id="errormsg" style="color: red"></div>
+    <button onclick="validation(),validate()">Submit</button>
+ <script type="text/javascript">
+ 	function validation() {
+ 		user = document.getElementById('password').value
+ 		userregex =/^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,12}$/
+
+ 		if(userregex.test(user)){
+              document.getElementById("sucessmsg").innerHTML="valid user"
+              document.getElementById("errormsg").innerHTML=""
+ 		}
+ 		else{
+ 			document.getElementById("errormsg").innerHTML="Invalid user"
+            document.getElementById("sucessmsg").innerHTML=""
+ 		}
+ 	}
+ 	function validate(){
+ 		usere = document.getElementById('password').value
+ 		userregex =/^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,12}$/
+ 		if(user.test(usere)){
+             document.getElementById("sucessmsg").innerHTML="valid user"
+              document.getElementById("errormsg").innerHTML=""
+ 		}
+ 		else{
+ 			document.getElementById("errormsg").innerHTML="Invalid user"
+            document.getElementById("sucessmsg").innerHTML=""
+ 		}
+ 		}
+ 	
+ </script>
+</body>
+</html>
